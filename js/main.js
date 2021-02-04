@@ -38,7 +38,7 @@ let weather = {
 		console.log(data)
 		let latcord = data.coord.lat
 		let lngcord = data.coord.lon
-
+		this.displayWeather(data)
 
 		fetch("https://api.timezonedb.com/v2.1/get-time-zone?key=K5WRWVW5QSPG&format=json&by=position"
 			+"&lat="+latcord
@@ -50,7 +50,7 @@ let weather = {
 			
 		})
 
-			this.displayWeather(data)
+			
 			
 
 			// document.querySelector('.city').innerText = data.name
@@ -65,7 +65,7 @@ let weather = {
 		const { icon, description} = data.weather[0]
 		const { temp, humidity} = data.main
 		const { speed } = data.wind
-		const {	lat, lon } = data.coord
+		
 	
 		
 		
